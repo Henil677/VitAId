@@ -2,11 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Error</title>
+    <title>Medication Suggestions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #3498DB;
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #3498DB;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #3498DB;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Symptom not found in our database. Please try again.</h1>
+    <h1>Medications for {{ symptom }}:</h1>
+    <ul>
+        {% for medication in medications %}
+            <li>{{ medication }}</li>
+        {% endfor %}
+    </ul>
     <a href="/">Back to Home</a>
 </body>
 </html>
-
