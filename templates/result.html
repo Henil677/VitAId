@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medication Suggestions</title>
+</head>
+<body>
+    <h1>Medications for {{ symptom }}:</h1>
+    <ul>
+        {% for medication in medications %}
+            <li>{{ medication }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
+
